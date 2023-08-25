@@ -16,6 +16,11 @@ h1{
  color: rgb(255, 255, 255);
 }
 
+p{
+  color: white;
+  font-weight: bold;
+}
+
 .Tim {
   height: auto;
   width: 400px;
