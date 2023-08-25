@@ -6,16 +6,16 @@ import { useState } from 'react';
 
 function App() {
 
-  const[count,setCount]= useState(0)
+  const[countT,setCountT]= useState(0)
 
   const[countF,setCountF]= useState(0)
 
-  const counter=()=>{
+  const counterT=()=>{
   // e.target.value()
-  setCount(count +1)
+  setCountT(countT +1)
   }
-  const lowerCount=()=>{
-    setCount(count -1)
+  const lowerCountT=()=>{
+    setCountT(countT -1)
   }
 
   const counterF=()=>{
@@ -32,9 +32,9 @@ function App() {
       
   
         <div className='Tim'>
-          <h2>Tim's Score  {count}</h2>
-          <button  onClick={counter}>Increment</button>
-          <button  onClick={lowerCount}>Decrement</button>
+          <h2>Tim's Score  {countT}</h2>
+          <button  onClick={counterT}>Increment</button>
+          <button  onClick={lowerCountT}>Decrement</button>
         
         </div>
       <br></br>
