@@ -11,19 +11,21 @@ function App() {
   const[countF,setCountF]= useState(0)
 
   const counterT=()=>{
-  // e.target.value()
+  
   setCountT(countT +1)
   }
   const lowerCountT=()=>{
-    setCountT(countT -1)
+    if (countT > 0) {
+      setCountT(countT -1)}
   }
 
   const counterF=()=>{
-    // e.target.value()
+    
     setCountF(countF +1)
     }
     const lowerCountF=()=>{
-      setCountF(countF -1)
+      if(countF > 0){
+      setCountF(countF -1)}
     }
 
   return (
