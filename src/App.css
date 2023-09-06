@@ -48,7 +48,6 @@ p{
   transition: background-color 0.3s ease;
 }
 
-
 .yoLegs:hover {
   background-color: rgb(255, 255, 0);
 }
@@ -56,11 +55,12 @@ p{
 .darkmode{
   width: 200px;
   height: 100px;
+  border-radius: 12px;
   background-color: orange;
   transition: background-color 0.3s ease;
 }
 
 .darkmode:hover{
-  background-color: rgb(11, 11, 11);
+  background-color: rgba(11, 11, 11, 0.512);
   color: aliceblue;
 }
