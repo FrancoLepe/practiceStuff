@@ -59,19 +59,20 @@ p {
   background-color: rgb(255, 255, 0);
 }
 
-.darkmode {
-  width: 200px;
-  height: 100px;
+.darkButton {
   border-radius: 12px;
-  background-color: orange;
+  height: 40px;
+  background-color: white;
   transition: background-color 0.3s ease;
 }
 
-.darkmode:hover {
-  background-color: rgba(11, 11, 11, 0.512);
-  color: aliceblue;
+.darkButton:hover {
+  background-color: teal;
 }
 
-.lightmode {
-  background-color: white;
+.lightButton {
+  border-radius: 12px;
+  height: 40px;
+  background-color: rgb(0, 251, 255);
+  transition: background-color 0.3s ease;
 }

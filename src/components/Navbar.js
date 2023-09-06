@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Navbar({ active, setActive, handleClick }) {
+function Navbar({ active, handleClick }) {
   return (
     <div>
       <h2>Navbar</h2>
       <button
-        className={active ? "darkmode" : "lightmode"}
+        className={active ? "darkButton" : "lightButton"}
         onClick={handleClick}
       >
         {active ? "Light Mode" : "Dark Mode"}
