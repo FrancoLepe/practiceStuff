@@ -1,5 +1,6 @@
 
 import './App.css';
+import Navbar from './components/Navbar';
 import { useEffect, useState } from 'react';
 
 
@@ -11,8 +12,9 @@ function App() {
   const [questions,setQuestions] = useState([])
   const[input,setInput]= useState("")
 
+
   useEffect(() => {
-    fetch('http://localhost:3001/questions')
+    fetch('http://localhost:8000/questions')
       .then((resp) => resp.json())
       .then((questionsData) => setQuestions(questionsData))
   },[])
@@ -22,9 +24,9 @@ const problems=questions.map((question)=>(
         <p>
           problem:{question.problem}
         </p>
+        {question.picture && (<img src={question.picture} alt={question.picName}/>)}
     </div>
-  )
-    )
+  ))
 
 
   const counterT=()=>{
@@ -43,6 +45,10 @@ const problems=questions.map((question)=>(
       setCountF(countF -1)}
     }
 
+  const handleYoLegsButton=()=>{
+    alert("yo Legs Stank")
+  }
+
     const handleInput=(e)=>{
       setInput(e.target.value)
     }
@@ -50,11 +56,18 @@ const problems=questions.map((question)=>(
     const handleSubmit=()=>{
       // if input ===  question.problem.answer
     }
+    
+
 
   return (
     <div className="App">
+      <Navbar/>
      <h1> Welcome</h1>
+     
+     <button className="yoLegs"onClick={handleYoLegsButton}>"yo legs" Button</button>
+     
       {problems}
+      
   
         <div className='Tim'>
           <h2>Tim's Score  {countT}</h2>
@@ -74,12 +87,15 @@ const problems=questions.map((question)=>(
           <form>
             <input></input>
               <button>submit</button>
-          
            </form>
+           <button onClick={counterF}>increment</button>
           <br></br>
         </div>
+        
       
-  
+  <br></br>
+  <br></br>
+  <br></br>
     </div>
   );
 }
